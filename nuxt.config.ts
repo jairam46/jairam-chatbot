@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/'
+    baseURL: "/jairam-chatbot/"
   },
   runtimeConfig: {
     // Add your Google API key to an env var named GOOGLE_API_KEY

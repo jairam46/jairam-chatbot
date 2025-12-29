@@ -3,14 +3,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   app: {
-    baseURL: "/jairam-chatbot/",
     head: {
       script:[
         {
-          src: 'https://cdn.tailwindcss.com', defer: true
+          src: 'https://cdn.tailwindcss.com', 
+          defer: true
         }
       ]
-    }
+    },
+    baseURL: "/jairam-chatbot/",
   },
   runtimeConfig: {
     // Add your Google API key to an env var named GOOGLE_API_KEY

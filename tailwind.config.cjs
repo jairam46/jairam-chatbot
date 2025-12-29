@@ -1,8 +1,10 @@
 module.exports = {
-  // Scan the whole project for class usage (covers Nuxt's `app/` structure)
   content: [
-    './**/*.{vue,js,ts,jsx,tsx}',
-    './server/**/*.{js,ts}'
+    './app/**/*.{vue,js,ts,jsx,tsx}',
+    './app/**/**/*.{vue,js,ts,jsx,tsx}',
+    './components/**/*.{vue,js,ts,jsx,tsx}',
+    './pages/**/*.{vue,js,ts,jsx,tsx}',
+    './layouts/**/*.{vue,js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {}

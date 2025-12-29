@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
   app: {
-    baseURL: "/jairam-chatbot/",
+    baseURL: "",
     head: {
       script:[
         {

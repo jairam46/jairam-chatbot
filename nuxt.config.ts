@@ -2,16 +2,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['@/assets/css/tailwind.css'],
   modules: ['@nuxt/icon', '@nuxt/image', '@nuxtjs/tailwindcss'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
-  },
+
   app: {
-    baseURL: "/jairam-chatbot/"
+    baseURL: '/jairam-chatbot/',
+  },
+
+  nitro: {
+    preset: 'github-pages',
   },
   runtimeConfig: {
     // Add your Google API key to an env var named GOOGLE_API_KEY

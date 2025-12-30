@@ -2,6 +2,15 @@ import { readBody } from 'h3'
 import { GoogleGenAI } from '@google/genai'
 
 export default defineEventHandler(async (event) => {
+  setHeader(event, 'Access-Control-Allow-Origin', 'https://jairam46.github.io/jairam-chatbot')
+  setHeader(event, 'Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+  setHeader(event, 'Access-Control-Allow-Headers', 'Content-Type, Authorization')
+
+   // Handle preflight
+  if (event.method === 'OPTIONS') {
+    return ''
+  }
+  
   const body = await readBody(event)
   const message = body?.message?.toString()
   if (!message) return { error: 'Missing message in request body' }

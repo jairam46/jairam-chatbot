@@ -49,7 +49,7 @@ async function send() {
 	loading.value = true
 	scrollToBottom()
 	try {
-		const res = await $fetch('https://jairam-chatbot.vercel.app/api/chat', { method: 'POST', body: { message: messageText } })
+		const res = await $fetch('https://jairam-chatbot.vercel.app/jairam-chatbot/api/chat', { method: 'POST', body: { message: messageText } })
 		if (res?.reply) messages.value.push({ role: 'assistant', text: res.reply })
 		else messages.value.push({ role: 'assistant', text: res.error || 'No response' })
 	} catch (e) {

@@ -8,9 +8,6 @@ export default defineNuxtConfig({
     baseURL: '/jairam-chatbot/',
   },
 
-  nitro: {
-    preset: 'github-pages',
-  },
   runtimeConfig: {
     // Add your Google API key to an env var named GOOGLE_API_KEY
     // or put it here (do NOT commit your real key).
